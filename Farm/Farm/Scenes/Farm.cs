@@ -12,18 +12,17 @@ using Engine.Modules;
 
 namespace Scenes
 {
-    class TestScene : Scene
+    class Farm : Scene
     {
-        public TestScene(ContentManager Content, SpriteBatch spriteBatch, Vector2 screen) : base(Content, spriteBatch)//help
+        public Farm(ContentManager Content, SpriteBatch spriteBatch, Vector2 screen) : base(Content, spriteBatch)//help
         {
-            physics = new Physics();
             Drawable.initCamera(new Vector2(0, 0), screen, 1.0f, 0.5f, 4.0f);
-            load();
         }
         public override void load()
         {
-            HUD.loadResource(Content);
+            physics = new Physics();
 
+            HUD.loadResource(Content);
             create(new HUD());
         }
         public override void draw()

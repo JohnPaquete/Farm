@@ -68,7 +68,7 @@ namespace Engine
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            scene = new TestScene(this.Content, this.spriteBatch, screen);
+            scene = new MainMenu(this.Content, this.spriteBatch, screen);
         }
 
         /// <summary>
