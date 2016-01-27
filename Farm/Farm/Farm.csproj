@@ -74,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssetManager.cs" />
-    <Compile Include="BoolObj.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Component.cs" />
     <Compile Include="Components\Switcher.cs" />

@@ -103,7 +103,7 @@ namespace Engine
         public void destroyContent()
         {
             Content.Dispose();
-            foreach (Drawable component in common)
+            foreach (Drawable component in drawable)
             {
                 component.destroy();
             }

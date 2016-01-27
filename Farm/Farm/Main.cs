@@ -69,6 +69,7 @@ namespace Engine
 
             // TODO: use this.Content to load your game content here
             scene = new MainMenu(this.Content, this.spriteBatch, screen);
+            scene.load();
         }
 
         /// <summary>

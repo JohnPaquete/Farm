@@ -13,19 +13,18 @@ namespace Scenes
 {
     class MainMenu : Scene
     {
-        private BoolObj exit;
+        private bool exit;
         Vector2 screen;
 
         public MainMenu(ContentManager Content, SpriteBatch spriteBatch, Vector2 screen) : base(Content, spriteBatch)
         {
             this.screen = screen;
             Drawable.initCamera(new Vector2(0, 0), screen, 1.0f, 0.5f, 4.0f);
-            exit = new BoolObj(false);
         }
 
         public override Scene change()
         {
-            if (exit.value)
+            if (exit)
             {
                 return new Farm(this.Content, this.spriteBatch, screen);
             }
@@ -39,7 +38,7 @@ namespace Scenes
 
         public override void load()
         {
-            create(new Switcher(exit));
+            create(new Switcher());
         }
 
         public override void unload()

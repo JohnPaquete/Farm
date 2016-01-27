@@ -11,11 +11,11 @@ namespace Components
 {
     class Switcher : Component
     {
-        BoolObj exit;
+        bool exit;
 
-        public Switcher(BoolObj exit)
+        public Switcher()
         {
-            this.exit = exit;
+
         }
         public override void destroy()
         {
@@ -35,7 +35,7 @@ namespace Components
         public override void update(GameTime gameTime, InputListener input)
         {
             if (input.isKeyPressed(Keys.Enter))
-                exit.value = true;
+                exit = true;
         }
     }
 }
